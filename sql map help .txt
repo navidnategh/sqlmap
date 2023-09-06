@@ -33,6 +33,5 @@ sqlmap -u URL  --level=[1,2,3,4,5]  default being level 1. Level 2 adds HTTP Coo
 
 
 
-
-python sqlmap.py   --random-agent  --level=1   --crawl=1    --batch --threads=4  -u https://www.emuasa.es/en/login?p_p_id=  -p p_p_id
+python sqlmap.py   --random-agent  --level=1   --crawl=1    --batch --threads=4  -u URL?id=  -p id
 
